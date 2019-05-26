@@ -32,7 +32,7 @@ else
 		b = s[(m-1)..(k-1)-1]
 		b_k1 = s[-1][1]
 		s.pop
-		n.times do |r| #‚±‚Á‚¿‚ÍB‚ª‡Œvn+1ŒÂ‚ ‚é
+		n.times do |r| #‚±‚Á‚¿‚Íb‚ª‡Œvn+1ŒÂ‚ ‚é
 			br = []
 			b.each do |a, b|
 				br.push([a+(r+1)*delta, b])
