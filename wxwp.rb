@@ -38,7 +38,7 @@ else
 				br.push([a+(r+1)*delta, b])
 			end
 			br[0][1] = b_k1 - 1
-			s.append(br)
+			s.concat(br)
 		end
 	else #rule5
 		s[-1] = [s[-1][0]-1, n]
