@@ -1,7 +1,7 @@
 #s[n]+v‚ð“WŠJ‚·‚é
 #Ruby‚Å‚Í”z—ñ‚Ì“Y‚¦Žš‚Í1‚©‚ç‚È‚Ì‚Å‘S‚Ä‚ª1ŒÂ‚¸‚ê‚é
 
-s = [[0,0], [1,1]]
+s = [[0,0], [1,2], [1,1]]
 n = 5
 
 k = s.length
@@ -48,15 +48,16 @@ else
 		
 		s.pop
 		
-		g = s[0...(m-1)-1]
-		
+		g = []
+		if (m-1)-1 > 0 then
+			g = s[0..(m-1)-1]
+		end
 		for i in 0..(n-1) do
 			bi = []
 			for j in m..(k-1) do
 				bi.push([s[j-1][0] + i * delta1, s[j-1][1] + i * delta2])
 			end
 			g.concat(bi)
-			p
 		end
 		
 		for i in 0...g.length do
