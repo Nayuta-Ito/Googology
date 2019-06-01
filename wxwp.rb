@@ -20,11 +20,11 @@ else
 	end
 	
 	if s[k-1][0] - s[m-1][0] == 1 && s[k-1][1] == 0 then #rule3
-		g = s[1..(m-1)-1]
+		g = s[0..(m-1)-1]
 		b = s[(m-1)..(k-1)-1]
 		s.pop
 		(n-1).times do #s‚É‚ÍÅ‰‚©‚çb‚ª1ŒÂ‚ ‚é
-			s.append(b)
+			s.concat(b)
 		end
 	elsif s[k-1][1] > 0 then #rule4
 		delta = s[k-1][0] - s[m-1][0]
@@ -38,7 +38,7 @@ else
 				br.push([a+(r+1)*delta, b])
 			end
 			br[0][1] = b_k1 - 1
-			s.append(br)
+			s.concat(br)
 		end
 	else #rule5
 		s[-1] = [s[-1][0]-1, n]
