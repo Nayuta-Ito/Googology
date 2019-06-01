@@ -28,7 +28,7 @@ else
 		end
 	elsif s[k-1][1] > 0 then #rule4
 		delta = s[k-1][0] - s[m-1][0]
-		g = s[1..(m-1)-1]
+		g = s[0..(m-1)-1]
 		b = s[(m-1)..(k-1)-1]
 		b_k1 = s[-1][1]
 		s.pop
