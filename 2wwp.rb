@@ -16,7 +16,7 @@ class Array
 	end
 end
 
-s = [[0,0], [1,1]]
+s = [[0,0], [1,1], [1,0]]
 n = 5
 
 k = s.length
@@ -39,7 +39,7 @@ else
 	#puts "t_ary: #{t_ary.inspect}"
 
 	r = 0
-	t_num = k
+	t_num = k - 1
 	while t_num >= 0 do
 		if t_ary.index(t_num) && (s[t_num-1][1] < s[-1][1] || s[-1][1] == 0) then
 			r = t_num
@@ -58,7 +58,7 @@ else
 	#puts "b: #{b.inspect}"
 
 	if s[k-1][0] > 0 && s[k-1][1] == 0 then #rule3
-		puts "entered rule3"
+		#puts "entered rule3"
 		s.pop
 		(n-1).times do #sには最初からbが1個ある
 			s.concat(b)
