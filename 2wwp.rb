@@ -16,8 +16,8 @@ class Array
 	end
 end
 
-s = [[0,0], [1,2], [1,1], [2,2], [2,1], [3,2], [3,1]]
-n = 2
+s = [[0,0], [1,1]]
+n = 5
 
 k = s.length
 
@@ -36,7 +36,7 @@ else
 		m -= 1
 	end
 
-	puts "t_ary: #{t_ary.inspect}"
+	#puts "t_ary: #{t_ary.inspect}"
 
 	r = 0
 	t_num = k
@@ -54,8 +54,8 @@ else
 	end
 	b = s[r-1...-1]
 
-	puts "g: #{g.inspect}"
-	puts "b: #{b.inspect}"
+	#puts "g: #{g.inspect}"
+	#puts "b: #{b.inspect}"
 
 	if s[k-1][0] > 0 && s[k-1][1] == 0 then #rule3
 		puts "entered rule3"
@@ -70,7 +70,7 @@ else
 
 		for i in 1..n do
 			for t_idx in (1..p).to_a.reverse do
-				p(["t_idx:", t_idx])
+				#p(["t_idx:", t_idx])
 				#(a_T_(t_idx)+iΔ, b_T_(t_idx)) concat A_(t_idx)(i)
 				b.push([s[t_ary[t_idx] - 1][0] + i * delta, s[t_ary[t_idx] - 1][1]])
 				ati = Array.new()
@@ -80,8 +80,8 @@ else
 					end
 				end
 				b.concat(ati.deep_copy)
-				puts "ati: #{ati.inspect}"
-				puts "b: #{b.inspect}"
+				#puts "ati: #{ati.inspect}"
+				#puts "b: #{b.inspect}"
 			end
 		end
 
